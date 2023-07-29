@@ -4,6 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExerciseCard";
+import { alignProperty } from "@mui/material/styles/cssUtils";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   return (
@@ -25,6 +26,17 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         {exercises.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
+      </Stack>
+      <Stack sx={{ mt: { lg: "114px", xs: "70px" } }} alignItems="center">
+        {exercises.length > 9 && (
+          <Pagination
+            color="standard"
+            shape="rounded"
+            defaultPage={1}
+            size="large"
+            count={Math.ceil(exercises.length / 9)}
+          />
+        )}
       </Stack>
     </Box>
   );
