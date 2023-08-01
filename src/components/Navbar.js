@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/GymEase/GymEase-logos_black.png";
 import { NoEncryption } from "@mui/icons-material";
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
         <img
           src={Logo}
           alt="logo"
-          style={{ width: "48px", margin: "0 20px" }}
+          style={{ width: "140px", margin: "0 20px" }}
         />
       </Link>
       <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
